@@ -26,7 +26,12 @@ public class BackstagePass {
     }
 
     public void passOneDay() {
-        this.sellIn --;
-        this.quality ++;
+        if (this.sellIn <= 10) {
+            this.quality += 2;
+        } else {
+
+            this.quality++;
+        }
+        this.sellIn--;
     }
 }
