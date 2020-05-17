@@ -27,6 +27,7 @@ public class AgedBrie {
 
     public void passOneDay() {
         this.sellIn--;
-        this.quality += 1;
+        this.quality = Math.min(50, this.quality += 1);
+
     }
 }
