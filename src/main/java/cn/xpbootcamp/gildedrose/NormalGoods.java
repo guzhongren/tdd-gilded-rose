@@ -26,15 +26,12 @@ public class NormalGoods {
     }
 
     public void passOneDay() {
-        if (this.quality > 0) {
-            if(this.sellIn <= 0) {
-                this.quality -= 2;
-            } else {
-                this.quality --;
-            }
-        }else {
-            this.quality = 0;
+        this.sellIn --;
+        if(this.sellIn > 0) {
+            this.quality --;
+        } else {
+            this.quality -= 2;
         }
-        this.sellIn--;
+        this.quality = Math.max(0, this.quality);
     }
 }
