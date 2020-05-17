@@ -19,4 +19,12 @@ public class NormalGoodsTest {
         assertThat(normalGoods.getSellIn()).isEqualTo(1);
         assertThat(normalGoods.getQuality()).isEqualTo(0);
     }
+
+    @Test
+    public void should_return_sellIn_2_quality_5_when_normal_product_pass_1_day_given_sellIn_3_quality_6(){
+        NormalGoods normalGoods = new NormalGoods(3,6);
+        normalGoods.passOneDay();
+        assertThat(normalGoods.getSellIn()).isEqualTo(2);
+        assertThat(normalGoods.getQuality()).isEqualTo(5);
+    }
 }
