@@ -3,6 +3,7 @@ package cn.xpbootcamp.gildedrose;
 public class NormalGoods {
     private int sellIn;
     private int quality;
+
     public NormalGoods(int sellIn, int quality) {
         this.sellIn = sellIn;
         this.quality = quality;
@@ -25,7 +26,11 @@ public class NormalGoods {
     }
 
     public void passOneDay() {
-        this.sellIn --;
-        this.quality --;
+        this.sellIn--;
+        if (this.quality > 0) {
+            this.quality--;
+        }else {
+            this.quality = 0;
+        }
     }
 }
