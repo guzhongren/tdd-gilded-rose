@@ -8,16 +8,8 @@ public class AgedBrie {
         return sellIn;
     }
 
-    public void setSellIn(int sellIn) {
-        this.sellIn = sellIn;
-    }
-
     public int getQuality() {
         return quality;
-    }
-
-    public void setQuality(int quality) {
-        this.quality = quality;
     }
 
     public AgedBrie(int sellIn, int quality) {
