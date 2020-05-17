@@ -26,8 +26,13 @@ public class AgedBrie {
     }
 
     public void passOneDay() {
+        if(this.sellIn <= 0) {
+            this.quality += 2;
+        } else {
+            this.quality ++;
+        }
+        this.quality = Math.min(50, this.quality);
         this.sellIn--;
-        this.quality = Math.min(50, this.quality += 1);
 
     }
 }

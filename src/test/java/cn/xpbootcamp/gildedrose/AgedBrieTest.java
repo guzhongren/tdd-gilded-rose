@@ -27,4 +27,11 @@ public class AgedBrieTest {
         assertThat(agedBrie.getSellIn()).isEqualTo(1);
         assertThat(agedBrie.getQuality()).isEqualTo(50);
     }
+    @Test
+    public void should_return_sellIn_n1_quality_22_when_agedBrie_pass_1_day_given_sellIn_0_quality_20 () {
+        AgedBrie agedBrie = new AgedBrie(0,20);
+        agedBrie.passOneDay();
+        assertThat(agedBrie.getSellIn()).isEqualTo(-1);
+        assertThat(agedBrie.getQuality()).isEqualTo(22);
+    }
 }
