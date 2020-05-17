@@ -32,6 +32,7 @@ public class BackstagePass {
 
             this.quality++;
         }
+        this.quality = Math.min(50, this.quality);
         this.sellIn--;
     }
 }
